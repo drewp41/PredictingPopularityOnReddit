@@ -5,6 +5,7 @@
 Temporary:\
 QUESTIONS WE CAN ANSWER:\
 Is there a correlation between the length of the post’s title with the amount of upvotes it receives?\
+https://console.cloud.google.com/bigquery?sq=295350008176:8aac8a88297348329f1bb892243aa39b\
 - Can do the same question but use only the top subreddits\
 
 Is there a correlation between the length of the post’s title with the amount of comments it receives? \
