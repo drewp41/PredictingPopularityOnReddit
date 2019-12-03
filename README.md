@@ -9,8 +9,8 @@ Is there a correlation between the length of the post’s title with the amount 
 Is there a correlation between the length of the post’s title with the amount of comments it receives? \
 Do posts that ask a question (rather than a statement) recieve more upvotes?\
 Do simple text posts or posts than include a link recieve more upvotes?\
-   - What types of links generate the most upvotes? (Website, Image, Video)
-Could look at most popular bi-grams or tri-grams in popular subreddits? (ex. r/AskReddit's top bi-grams might include "what are"\
+   - What types of links generate the most upvotes? (Website, Image, Video)\
+Could look at most popular bi-grams or tri-grams in popular subreddits? (ex. r/AskReddit's top bi-grams might include "what are")\
 
 
 ---
