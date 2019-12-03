@@ -15,6 +15,10 @@ Do simple text posts or posts than include a link recieve more upvotes?\
 
 Could look at most popular bi-grams or tri-grams in popular subreddits? (ex. r/AskReddit's top bi-grams might include "what are")\
 
+What is the best time of day to post to reddit?\
+
+Is there a correlation between a post title having numbers with the amount of upvotes it recieves?\
+
 
 ---
 # Introduction
