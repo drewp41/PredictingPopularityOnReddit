@@ -2,11 +2,12 @@
 # Post Title Length Vs Upvotes
 ### Authors: Drew Paul, Chigozie Nna
 --
-Temporary:
-QUESTIONS WE CAN ANSWER:
-Is there a correlation between the length of the post’s title with the amount of upvotes it receives? 
-Can do the same question but use only the top subreddits
-Is there a correlation between the length of the post’s title with the amount of comments it receives? 
+Temporary:\
+QUESTIONS WE CAN ANSWER:\
+Is there a correlation between the length of the post’s title with the amount of upvotes it receives? \
+   - Can do the same question but use only the top subreddits\
+Is there a correlation between the length of the post’s title with the amount of comments it receives? \
+Do posts that ask a question (rather than a statement) recieve more upvotes?\
 
 ---
 # Introduction
