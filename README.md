@@ -6,9 +6,8 @@ Temporary:\
 QUESTIONS WE CAN ANSWER:\
 Is there a correlation between the length of the post’s title with the amount of upvotes it receives?\
 https://bigquery.cloud.google.com/results/reddit-post-title-length:US.bquijob_2ea3ad68_16ef1c6f456\
- - discuss how the score can be skewed by the the posts that have basically no upvotes, so maybe filter by posts that get popular (>1000 score?)
+ - discuss how the score can be skewed by the the posts that have basically no upvotes, so maybe filter by posts that get popular (>1000 score?)\
  -discuss how it can be skewed based on subreddits (ex. meirl has all posts titled "meirl"), so filter by top suubreddits
-- Can do the same question but use only the top subreddits\
 
 Is there a correlation between the length of the post’s title with the amount of comments it receives? \
 Do posts that ask a question (rather than a statement) recieve more upvotes?\
