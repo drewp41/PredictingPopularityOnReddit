@@ -29,3 +29,5 @@ In this tutorial, our goal is to tidy up the data of posts within a years total,
 
 ---
 # Getting started with the Data
+We decided to use Python 3  and SQL to help gain and analyze our data. Crucial libraries used to help us where: [pandas](https://towardsdatascience.com/a-quick-introduction-to-the-pandas-python-library-f1b678f34673), [matplotlib](https://matplotlib.org/), [seaborn](https://python-graph-gallery.com/seaborn/), and [scikit-learn](https://machinelearningmastery.com/a-gentle-introduction-to-scikit-learn-a-python-machine-learning-library/).
+
