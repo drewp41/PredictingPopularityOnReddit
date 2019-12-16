@@ -15,7 +15,7 @@ In this tutorial, our goal is to analyze all the Reddit posts from Janurary 2016
 <hr>
 <body>
 <h1 id="getting-started-with-the-data">Getting started with the Data</h1>
-<p>We decided to use Python 3 and SQL to help gain and analyze our data. Crucial libraries used to help us where: <a href="https://towardsdatascience.com/a-quick-introduction-to-the-pandas-python-library-f1b678f34673">pandas</a>, <a href="https://matplotlib.org/">matplotlib</a>, <a href="https://python-graph-gallery.com/seaborn/">seaborn</a>, and <a href="https://machinelearningmastery.com/a-gentle-introduction-to-scikit-learn-a-python-machine-learning-library/">scikit-learn</a>.</p>
+<p>We decided to use Python 3 and SQL to gather and analyze our data. Crucial libraries used to help us where: <a href="https://towardsdatascience.com/a-quick-introduction-to-the-pandas-python-library-f1b678f34673">pandas</a>, <a href="https://matplotlib.org/">matplotlib</a>, <a href="https://python-graph-gallery.com/seaborn/">seaborn</a>, and <a href="https://machinelearningmastery.com/a-gentle-introduction-to-scikit-learn-a-python-machine-learning-library/">scikit-learn</a>.</p>
 </body>
   
 
@@ -34,11 +34,12 @@ In this tutorial, our goal is to analyze all the Reddit posts from Janurary 2016
  
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<body> We plan on using multiple panda dataframes that will be read in using SQL commands through googles BigQuery website.
-
+<body> We plan on using SQL commands to query in the data, and using Panda's dataframes to read in and analyze the data.
+<br>
 <h2>Processing and Recieving data </h2>
 
-We used the following SQL command through Googles BigQuery to at first take data from a third party called <a href= "https://pushshift.io" > "Pushshift" </a> that is a Reddit API that tracks almost all of Reddit's for the last few years. We are taking in data from 2016 to Augst 2019 due to the immense amount of data that is tracked.
+We used the following SQL command through Google's BigQuery to take data from <a href= "https://pushshift.io" > "Pushshift" </a> (a third party Reddit API) that tracks nearly all of Reddit's post history.  We are taking in data from Janurary 2016 to August 2019, which contains about 510 million rows of data.  Luckily using Google's BigQuery, that process only takes a matter of seconds.
+
 </body>
 </div>
 </div>
@@ -53,7 +54,7 @@ We used the following SQL command through Googles BigQuery to at first take data
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 
-<p>In this SQL Query we are getting the length of every single title, averaging the score based on the length of the title, the average number of comments based on the length of the title, and the number of posts with that amount of characters. This is done by using the 'GROUP BY' command with SQL. BigQuery convertd this data into a <a href= "https://www.howtogeek.com/348960/what-is-a-csv-file-and-how-do-i-open-it">csv file</a>, which is a table or excel seperating the data by commas (,) making it easy to parse and split the data with. </p>
+<p>In this SQL Query we are getting the length of every single title, averaging the score based on the length of the title, the average number of comments based on the length of the title, and the number of posts with that amount of characters. This is done by using the 'GROUP BY' command with SQL. BigQuery convertd this data into a .csv file, making it easy to parse and analyze. </p>
   
 <h2> Reading the Data </h2><p>We will First use Pythons Pandas to read in the csv file and convert it into a panda <a href="https://www.geeksforgeeks.org/python-pandas-dataframe">dataframe</a>, which is a two-dimensional size-mutable, potentially heterogeneous tabular data structure with labeled axes (rows and columns)
 
