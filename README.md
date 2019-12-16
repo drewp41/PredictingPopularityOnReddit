@@ -298,7 +298,7 @@ In this first graph, we looked at the potential relationship between the length 
 
 <p><center> <h2> Reddit Artwork </h2> </center>
 <img src="https://static.makeuseof.com/wp-content/uploads/2019/04/whats-reddit-670x335.jpg" /></p>
-<h2> Filtered Data </h2><p> We then decided to filter our data to only include the most popular subreddits, so they don't include ones like "r/me_irl", as discussed earlier. We want to see the relationship between title length and upvotes for typical reddit users, that aren't making posts with smally, silly trends like "r/hmmm"</p>
+<h2> Filtered Data </h2><p> We then decided to filter our data to only include the most popular subreddits, so they don't include ones like "r/me_irl", as discussed earlier. We want to see the relationship between title length and upvotes for typical reddit users, that aren't making posts with smally, silly trends like "r/hmmm".</p>
 </div>
 </div>
 </div>
