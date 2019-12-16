@@ -758,7 +758,7 @@ We used the same method from above to graph the relationship between the post ti
   </tbody>
 </table>
 <p>168 rows × 3 columns</p>
-<p>We wanted to display our data in a heatmap, but the data was organiezd into three columns. We had to reorganize the data in order for the heatmap to work correctly.</p>
+<p>We wanted to display our data in a heatmap, but the data was organized into three columns. We had to reorganize the data in order for the heatmap to work correctly.</p>
 
 
 </div>
