@@ -1,13 +1,11 @@
+
+
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8" />
 
+
 <title>Final_Project_Code</title>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-
-
 
 <style type="text/css">
     /*!
@@ -13072,20 +13070,17 @@ div#notebook {
   div.cell {
     display: block;
     page-break-inside: avoid;
-  } 
-  div.output_wrapper { 
-    display: block;
-    page-break-inside: avoid; 
   }
-  div.output { 
+  div.output_wrapper {
     display: block;
-    page-break-inside: avoid; 
+    page-break-inside: avoid;
+  }
+  div.output {
+    display: block;
+    page-break-inside: avoid;
   }
 }
 </style>
-
-<!-- Custom stylesheet, it must be in the same directory as the html file -->
-<link rel="stylesheet" href="custom.css">
 
 <!-- Loading mathjax macro -->
 <!-- Load mathjax -->
@@ -13108,13 +13103,57 @@ div#notebook {
         }
     });
     </script>
-    <!-- End of mathjax configuration --></head>
+    <!-- End of mathjax configuration -->
+
+<style>
+        .cell.nbinteract-left {
+            width: 50%;
+            float: left;
+        }
+
+        .cell.nbinteract-right {
+            width: 50%;
+            float: right;
+        }
+
+        .cell.nbinteract-hide_in > .input {
+            display: none;
+        }
+
+        .cell.nbinteract-hide_out > .output_wrapper {
+            display: none;
+        }
+
+        .cell:after {
+          content: "";
+          display: table;
+          clear: both;
+        }
+
+        div.output_subarea {
+            max-width: initial;
+        }
+
+        .jp-OutputPrompt {
+            display: none;
+        }
+    </style></head>
 <body>
   <div tabindex="-1" id="notebook" class="border-box-sizing">
-    <div class="container" id="notebook-container">
+    <div class="container">
+      
 
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
+
+
+  <div class="cell text_cell">
+    <button class="js-nbinteract-widget">
+      Loading widgets...
+    </button>
+  </div>
+
+
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><img src="https://miro.medium.com/max/3840/1*e3E0OQzfYCuWk0pket5dAA.png" alt="Reddit Logo" /></p>
 <p><center> <h1 style="font-size:36px;">Predicting Upvotes and Popularity on Reddit</h1> </center></p>
@@ -13136,9 +13175,13 @@ In this tutorial, our goal is to tidy up the data of posts within a years total,
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[166]:</div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -13157,9 +13200,8 @@ In this tutorial, our goal is to tidy up the data of posts within a years total,
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
+  </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <body> We plan on using multiple panda dataframes that will be read in using SQL commands through googles BigQuery website.
 
@@ -13170,16 +13212,14 @@ We used the following SQL command through Googles BigQuery to at first take data
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><img src= "https://i.imgur.com/xc6mlpA.png>" alt= "SQL Code" width="400"/></p>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><body> In this SQL Query we are getting the length of every single title, averaging the score based on the length of the title, the average number of comments based on the length of the title, and the number of posts with that amount of characters. This is done by using the 'GROUP BY' command with SQL. BigQuery convertd this data into a <a href= https://www.howtogeek.com/348960/what-is-a-csv-file-and-how-do-i-open-it/>csv file</a>, which is a table or excel seperating the data by commas (,) making it easy to parse and split the data with.</p>
 <h2> Reading the Data </h2><p>We will First use Pythons Pandas to read in the csv file and convert it into a panda <a href=https://www.geeksforgeeks.org/python-pandas-dataframe/>dataframe</a>, which is a two-dimensional size-mutable, potentially heterogeneous tabular data structure with labeled axes (rows and columns)</p>
@@ -13187,9 +13227,13 @@ We used the following SQL command through Googles BigQuery to at first take data
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[167]:</div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;LengthScoreComments.csv&#39;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
@@ -13206,8 +13250,7 @@ We used the following SQL command through Googles BigQuery to at first take data
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[167]:</div>
-
+    
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -13316,9 +13359,8 @@ We used the following SQL command through Googles BigQuery to at first take data
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
+  </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>In the DataFrame above you can see:</p>
 <ul>
@@ -13336,9 +13378,13 @@ In this first graph we will graph to see the relation between Length of Title ve
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[66]:</div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">X</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;length_title&#39;</span><span class="p">]</span>
@@ -13361,8 +13407,7 @@ In this first graph we will graph to see the relation between Length of Title ve
 
 <div class="output_area">
 
-    <div class="prompt"></div>
-
+    
 
 
 
@@ -13377,9 +13422,8 @@ In this first graph we will graph to see the relation between Length of Title ve
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
+  </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><body> We can see that there is a clear relation between the upvotes and the  number of characters in the post title. Based on the graph it seems that it is the best to have captions of Character lengths between 5-25 and 153-300+. The range most likely is based off the fact that the type of posts are farely different. There are many popular subreddits named short and quick things like "meow" to follow a trend that will be a picture of a cat that revieve many likes as long as they are following the trend. This Explains the peak and the downtrend of the number of likes as the posts begin to be normal and causal day to day type of posts. The number of UpVotes however does begin to rise again as the number of character are longer. This is because as the characters get longer, they tend to be actual issues and problems that recieve more views and reactions (ex: A president trump quote = more characters and responses).</p>
 <body>
@@ -13390,9 +13434,13 @@ In this first graph we will graph to see the relation between Length of Title ve
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[67]:</div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">X</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;length_title&#39;</span><span class="p">]</span>
@@ -13415,8 +13463,7 @@ In this first graph we will graph to see the relation between Length of Title ve
 
 <div class="output_area">
 
-    <div class="prompt"></div>
-
+    
 
 
 
@@ -13431,9 +13478,8 @@ In this first graph we will graph to see the relation between Length of Title ve
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
+  </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <body>Based on the relation we are able to see that the Number of comments are actually greater based on the character length of the posts. A reasoning for this data is that the longer the character length in posts most likely mean, it is on a controversial topic, quote, or a scientific analysis that people are more likely to comment on and put their input. This is in contrast to small memes and jokes that will mostly recieve likes and not comments.</body><hr size=20>
 
@@ -13443,25 +13489,27 @@ In this first graph we will graph to see the relation between Length of Title ve
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><img src="https://i.imgur.com/bALsUPt.png" width="500" /></p>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><p> In this SQL Query we are creating an entirely new cvs file with the top 15 subreddits to see the relation between these subreddits that people typically talk about on a day to day basis. This data should give an accurate analysis of what we were looking for and give a different result in the relation shown in the graph<p></p>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[170]:</div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">Unbias</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;FilteredSubLengthScore.csv&#39;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
@@ -13478,8 +13526,7 @@ In this first graph we will graph to see the relation between Length of Title ve
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[170]:</div>
-
+    
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -13577,9 +13624,8 @@ In this first graph we will graph to see the relation between Length of Title ve
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
+  </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>In the DataFrame above you can see:</p>
 <ul>
@@ -13596,9 +13642,13 @@ In this next graph we will graph to see the relation between Length of Title ver
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[70]:</div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">X</span> <span class="o">=</span> <span class="n">Unbias</span><span class="p">[</span><span class="s1">&#39;length_title&#39;</span><span class="p">]</span>
@@ -13621,8 +13671,7 @@ In this next graph we will graph to see the relation between Length of Title ver
 
 <div class="output_area">
 
-    <div class="prompt"></div>
-
+    
 
 
 
@@ -13637,9 +13686,8 @@ In this next graph we will graph to see the relation between Length of Title ver
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
+  </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Based on the new graph we can see a less skewed range of values and a smaller drop off between the relationship. We can see a more accurate drop off. It seems that the amount of characters required are still the same despite the data being filtered now. This overall proves the fact that it is best to have posts that are between the amounts of 5-25 characters. </p><hr size="20">
 
@@ -13647,9 +13695,13 @@ In this next graph we will graph to see the relation between Length of Title ver
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[71]:</div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">Y</span> <span class="o">=</span> <span class="n">Unbias</span><span class="p">[</span><span class="s1">&#39;avg_score&#39;</span><span class="p">]</span>
@@ -13679,8 +13731,7 @@ In this next graph we will graph to see the relation between Length of Title ver
 
 <div class="output_area">
 
-    <div class="prompt"></div>
-
+    
 
 
 
@@ -13695,17 +13746,20 @@ In this next graph we will graph to see the relation between Length of Title ver
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
+  </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3> Polynomial </h3>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[64]:</div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">poly_reg</span> <span class="o">=</span> <span class="n">PolynomialFeatures</span><span class="p">(</span><span class="n">degree</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
@@ -13736,8 +13790,7 @@ In this next graph we will graph to see the relation between Length of Title ver
 
 <div class="output_area">
 
-    <div class="prompt"></div>
-
+    
 
 
 
@@ -13752,49 +13805,48 @@ In this next graph we will graph to see the relation between Length of Title ver
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
+  </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>As you can see the ploynomial regression gives us a more accurate analysis of the data. We can see, the relation between the length of characters in a post and the average number of upvotes is a clear polynomial relation. Reddit users can use this now to get an accurate way to decide if they want to either go with a short amount of characters to get around 300 upvotes, or go with a more lengthy response to get 300+ upvotes. </p><hr size=20> 
+<p>As you can see the ploynomial regression gives us a more accurate analysis of the data. We can see, the relation between the length of characters in a post and the average number of upvotes is a clear polynomial relation. Reddit users can use this now to get an accurate way to decide if they want to either go with a short amount of characters to get around 300 upvotes, or go with a more lengthy response to get 300+ upvotes. </p><hr size="20"> 
 
 <center> <h2> Typical Reddit Home Page </h2></center>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="https://i.redd.it/vb63xmw7skm21.png" width= 800/></p>
+<p><img src="https://i.redd.it/vb63xmw7skm21.png" width= "800"/></p>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <center> <h2> Time Matters </h2> </center><p>In this section we will be analyzing whether the time and day of the post also come in as a factor to upvotes. This way us Reddit users can pinpoint the very day and time we should post to get the maximum popularity and be seen as a legend to our peers. We first started by getting new data again through BigQuery</p>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="https://i.imgur.com/63bqeZ2.png" width= 700/></p>
+<p><img src="https://i.imgur.com/63bqeZ2.png" width= "700"/></p>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p> Relationship between time of day posted and average score of the post (if score >= 100). We looked at the average score of posts on every hour of every day of the week, so 24 hours in a day x 7 days a week gives us 168 rows of data points </p>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[174]:</div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">timeScore</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;TimeVsScore.csv&#39;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
@@ -13832,8 +13884,7 @@ In this next graph we will graph to see the relation between Length of Title ver
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[174]:</div>
-
+    
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -13938,10 +13989,14 @@ In this next graph we will graph to see the relation between Length of Title ver
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[175]:</div>
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">timeScoreMatrix</span> <span class="o">=</span> <span class="n">timeScore</span><span class="o">.</span><span class="n">pivot</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="s1">&#39;dayofweek&#39;</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="s1">&#39;hourofday&#39;</span><span class="p">,</span> <span class="n">values</span><span class="o">=</span><span class="s1">&#39;avg_score&#39;</span><span class="p">)</span>
@@ -13961,8 +14016,7 @@ In this next graph we will graph to see the relation between Length of Title ver
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[175]:</div>
-
+    
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -14211,10 +14265,14 @@ In this next graph we will graph to see the relation between Length of Title ver
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[176]:</div>
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.ticker</span> <span class="k">as</span> <span class="nn">ticker</span>
@@ -14251,8 +14309,7 @@ In this next graph we will graph to see the relation between Length of Title ver
 
 <div class="output_area">
 
-    <div class="prompt"></div>
-
+    
 
 
 
@@ -14264,8 +14321,7 @@ In this next graph we will graph to see the relation between Length of Title ver
 
 <div class="output_area">
 
-    <div class="prompt"></div>
-
+    
 
 
 
@@ -14280,9 +14336,8 @@ In this next graph we will graph to see the relation between Length of Title ver
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
+  </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>As we can see from the data, the most popular times to post are between 6am-9am. 7am definitely has the highest ratio of upvotes over the seven days of the week, but it seems to be the most popular to make posts on Saturday and Sunday. After heavy analysis over all of these datasets we are finally able to make an accurate guess/prediction on what is best for Reddit users popularity in posts. Overall Reddit users should have the best ratios of upvotes if they post on a Saturday, at 7am, with roughly 5-25 characters in their post. This will give them the highest chance and possibility of getting a great amount of upvotes on their post, especially if it is a part of the top fifteen subreddits.
 
@@ -14296,11 +14351,29 @@ If you are interested in Reddit and the many datasets to use, we recommend using
 </div>
 </div>
 </div>
+
+
+
+<!-- Loads nbinteract package -->
+<script src="https://unpkg.com/nbinteract-core" async></script>
+<script>
+  (function setupNbinteract() {
+    // If NbInteract hasn't loaded, wait one second and try again
+    if (window.NbInteract === undefined) {
+      setTimeout(setupNbinteract, 1000)
+      return
+    }
+
+    var interact = new window.NbInteract({
+      spec: 'drewp41/PostTitleLengthVsUpvotes/master',
+      baseUrl: 'https://mybinder.org',
+      provider: 'gh',
+    })
+    interact.prepare()
+
+    window.interact = interact
+  })()
+</script>
     </div>
   </div>
 </body>
-
- 
-
-
-</html>
