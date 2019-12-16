@@ -189,6 +189,7 @@ We used the following SQL command through Google's BigQuery to take data from <a
 <h2> Graphing</h2>
 
 In this first graph, we will see if there is a relationship between the length of the post title, and the score that post recieves.  This can help readers gain an insight to how long they should make their posts to gain the most traction.
+<br>
 </body>
 </div>
 </div>
