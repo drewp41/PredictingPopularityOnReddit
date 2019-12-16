@@ -8,7 +8,7 @@ Authors: Andrew Paul, Chigozie Nna</h4></p>
 <body>
 <h1>Introduction </h1>
 
-Reddit is an American social news aggregation, web content rating, and discussion website.  The site quickly gained popularity after its creation in 2005, by two University of Virgina Students, Steven Huffman and Alexis Ohanian.  The goal of Reddit is for members to submit content to the site in the form of links, text posts, and images, which can then be voted up or down by other members.  The posts are categorized into items called “subreddits” where users can share specific topics and/or interests that relate to the category at hand.  In its early years, Reddit began to rise in popularity, with NSFW, Programming, and Science being the top trending subreddits of the time.  By 2008, a launch of numerous different subreddits began to popularize the site, with Reddit being able to gain enough popularity to overtake its competitor Digg by 2010.  Reddit’s rise to fame did not stop there, with Reddit finally achieving a total of one billion page views per month only a year later.  As of 2019, Reddit is ranked the 18th top site globally, according to Alexa Internet.
+Reddit is an American social news aggregation, web content rating, and discussion website.  The site quickly gained popularity after its creation in 2005 by two University of Virgina Students, Steven Huffman, and Alexis Ohanian.  The goal of Reddit is for users to submit content to the site in the form of links, text posts, and images, which can then be voted up or down by other users.  The posts are categorized into groups called “subreddits”, where users can share specific topics and/or interests that relate to the topic at hand.  In its early years, Reddit began to rise in popularity, with NSFW, Programming, and Science being the top trending subreddits of the time.  By 2008, a launch of numerous different subreddits began to popularize the site, with Reddit being able to gain enough popularity to overtake its competitor Digg by 2010.  Reddit’s rise to fame did not stop there, with Reddit finally achieving a total of one billion page views per month only a year later.  As of 2019, Reddit is ranked the 18th top site globally, according to Alexa Internet.
 <br>
 <br>
 In this tutorial, our goal is to analyze all the Reddit posts from Janurary 2016 to the August 2019.  The goal is to provide us with knowledge into what factors of a post (such as title length, and time posted) cause the most effect in terms of up votes, down votes, score, and general reaction to a post.  Posts may vary in topics, arguments, time posted, and many more variables, but we feel as if the popularity really depends on the post's title length, time posted.  We will be able to determine which length is just too short to gain attention, and what length is long enough to bore an audience.  We will also look at the most popular subreddit posts and time of day to see any upvote relation. We hope to give enough information and analysis to provide clarity, understanding, and a new found interest to readers that are unfamiliar with the social foreground. And hopefully fellow Reddit users will gain some insight on how to optimize their post to gain the most traction.
@@ -758,6 +758,9 @@ We used the same method from above to graph the relationship between the post ti
   </tbody>
 </table>
 <p>168 rows × 3 columns</p>
+<p>We wanted to display our data in a heatmap, but the data was organiezd into three columns. We had to reorganize the data in order for the heatmap to work correctly.</p>
+
+
 </div>
 </div>
 
@@ -767,8 +770,6 @@ We used the same method from above to graph the relationship between the post ti
 </div>
 
   </div>
-
-  
 
   <div class="
       cell border-box-sizing code_cell rendered">
@@ -1021,6 +1022,7 @@ We used the same method from above to graph the relationship between the post ti
   </tbody>
 </table>
 <p>7 rows × 24 columns</p>
+<p>After reorganizing our data with a pivot table in Pandas, it becomes easier to see how it can be formed into a heatmap. </p>
 </div>
 </div>
 
