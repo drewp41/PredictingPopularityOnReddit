@@ -8,15 +8,15 @@ Authors: Andrew Paul, Chigozie Nna</h4></p>
 <body>
 <h1>Introduction </h1>
 
-Reddit is an American social news aggregation, web content rating, and discussion website.  The site quickly gained popularity after its creation in 2005 by two University of Virgina Students, Steven Huffman, and Alexis Ohanian.  The goal of Reddit is for users to submit content to the site in the form of links, text posts, and images, which can then be voted up or down by other users.  The posts are categorized into groups called “subreddits”, where users can share specific topics and/or interests that relate to the topic at hand.  In its early years, Reddit began to rise in popularity, with NSFW, Programming, and Science being the top trending subreddits of the time.  By 2008, a launch of numerous different subreddits began to popularize the site, with Reddit being able to gain enough popularity to overtake its competitor Digg by 2010.  Reddit’s rise to fame did not stop there, with Reddit finally achieving a total of one billion page views per month only a year later.  As of 2019, Reddit is ranked the 18th top site globally, according to Alexa Internet.
+Reddit is an American social news aggregation, web content rating, and discussion website.  The site quickly gained popularity after its creation in 2005 by two University of Virgina Students, Steven Huffman, and Alexis Ohanian.  The goal of Reddit is for its users to submit content to the site in the form of links, text posts, and images, which can then be voted up or down by other users.  The posts are categorized into groups called “subreddits”, where users can share specific topics and/or interests that relate to the topic at hand.  In its early years, Reddit began to rise in popularity, with NSFW, Programming, and Science being the top trending subreddits of the time.  By 2008, a launch of numerous different subreddits began to popularize the site, with Reddit being able to gain enough popularity to overtake its competitor Digg by 2010.  Reddit’s rise to fame did not stop there, with Reddit finally achieving a total of one billion page views per month only a year later.  As of 2019, Reddit is ranked the 18th top site globally, according to Alexa Internet.
 <br>
 <br>
-In this tutorial, our goal is to analyze all the Reddit posts from Janurary 2016 to the August 2019.  The goal is to provide us with knowledge into what factors of a post (such as title length, and time posted) cause the most effect in terms of up votes, down votes, score, and general reaction to a post.  Posts may vary in topics, arguments, time posted, and many more variables, but we feel as if the popularity really depends on the post's title length, time posted.  We will be able to determine which length is just too short to gain attention, and what length is long enough to bore an audience.  We will also look at the most popular subreddit posts and time of day to see any upvote relation. We hope to give enough information and analysis to provide clarity, understanding, and a new found interest to readers that are unfamiliar with the social foreground. And hopefully fellow Reddit users will gain some insight on how to optimize their post to gain the most traction.
+In this tutorial, we analyzed all the Reddit posts from Janurary 2016 to the August 2019 (over 510 million posts!).  The goal was to provide us with knowledge into what factors of a post (such as title length, and time posted) cause the most effect in terms of up votes, down votes, score, and general reaction to a post.  Posts may vary in topics, arguments, time posted, and many more variables, but we felt as if the popularity really depended on the post's title length, and the time it was posted.  We were able to determine which length is just too short to gain attention, and what length is long enough to bore an audience.  We also looked at the most popular subreddit posts and time of day to see any upvote relation. We hope to give enough information and analysis to provide clarity, understanding, and a new found interest to readers that are unfamiliar with the social foreground. And hopefully fellow Reddit users will gain some insight on how to optimize their posts to gain the most traction.
 <body>
 <hr>
 <body>
 <h1 id="getting-started-with-the-data">Getting started with the Data</h1>
-<p>We decided to use Python 3 and SQL to gather and analyze our data. Crucial libraries used to help us where: <a href="https://towardsdatascience.com/a-quick-introduction-to-the-pandas-python-library-f1b678f34673">pandas</a>, <a href="https://matplotlib.org/">matplotlib</a>, <a href="https://python-graph-gallery.com/seaborn/">seaborn</a>, and <a href="https://machinelearningmastery.com/a-gentle-introduction-to-scikit-learn-a-python-machine-learning-library/">scikit-learn</a>.</p>
+<p>We decided to use Python 3 and SQL to gather and analyze our data. Crucial libraries used to help us were: <a href="https://towardsdatascience.com/a-quick-introduction-to-the-pandas-python-library-f1b678f34673">pandas</a>, <a href="https://matplotlib.org/">matplotlib</a>, <a href="https://python-graph-gallery.com/seaborn/">seaborn</a>, and <a href="https://machinelearningmastery.com/a-gentle-introduction-to-scikit-learn-a-python-machine-learning-library/">scikit-learn</a>.</p>
 </body>
   
 
@@ -35,7 +35,7 @@ In this tutorial, our goal is to analyze all the Reddit posts from Janurary 2016
  
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<body> We plan on using SQL commands to query in the data, and using Panda's dataframes to read in and analyze the data.
+<body> We used SQL commands to query in the data, and used Panda's dataframes to read in and analyze the data.
 <br>
 <h2>Processing and Recieving data </h2>
 
@@ -57,9 +57,9 @@ We used the following SQL command through Google's BigQuery to take data from <a
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 
-<p>In this SQL Query we are getting the length of every single title, averaging the score based on the length of the title, the average number of comments based on the length of the title, and the number of posts with that amount of characters. This is done by using the 'GROUP BY' command with SQL. BigQuery convertd this data into a .csv file, making it easy to parse and analyze. </p>
+<p>In this SQL Query we are getting the length of every single title, the average score based on the length of the title, the average number of comments based on the length of the title, and the number of posts with that amount of characters. This is done by using the 'GROUP BY' command with SQL. BigQuery convertd this data into a .csv file, making it easy to parse and analyze. </p>
   
-<h2> Reading the Data </h2><p>We will First use Python's Pandas module to read in the .csv file and convert it into a Panda <a href="https://www.geeksforgeeks.org/python-pandas-dataframe">dataframe</a>, which is a two-dimensional size-mutable, potentially heterogeneous tabular data structure with labeled axes (rows and columns).
+<h2> Reading the Data </h2><p>We first used Python's Pandas module to read in the .csv file and convert it into a Panda <a href="https://www.geeksforgeeks.org/python-pandas-dataframe">dataframe</a>, which is a two-dimensional, size-mutable, and potentially heterogeneous tabular data structure with labeled axes (rows and columns).
 
 
   <div class="
@@ -189,7 +189,7 @@ We used the following SQL command through Google's BigQuery to take data from <a
 <body>
 <h2> Graphing</h2>
 
-In this first graph, we will see if there is a relationship between the length of the post title, and the score that post recieves.  This can help readers gain an insight to how long they should make their posts to gain the most traction.
+In this first graph, we looked at the potential relationship between the length of the post title, and the score that post recieved.  This can help readers gain an insight to how long they should make their posts to gain the most traction.
 <br>
 <br>
 </body>
@@ -242,12 +242,12 @@ In this first graph, we will see if there is a relationship between the length o
   </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><body> We can see that there is a clear relationship between the number of characters in the post title, and the score recieved. Based on the graph, it seems the highest scored posts have captions of character lengths between 5-25 and 153-300. The range most likely is based off the fact that the type of posts are fairly different. There are many popular subreddits such as "r/me_irl" where every post is titled with the same six characters, "me_irl". Other popular subreddits are seemingly the opposite, such as "r/futurology", where most post titles are scientific headlines with over 200 characters.  One explanation for what is goin on here is that there are many, many times more posts with 50 character titles than, say, 261. So there's a dramatic increase in variability towards the upper end of the character limit.  As the number of characters get longer, the posts could tend to be actual issues or phenomena/facts that require longer explanation, and thus recieve more views and reactions (Ex. A president's quote = more characters and responses).
+<p><body> We can see that there is a clear relationship between the number of characters in the post title, and the score recieved.  Based on the graph, it seems the highest scored posts have title lengths between 5-25 characters, and 153-300 characters.  The range most likely is based off the fact that the type of posts are fairly different.  There are many popular subreddits such as "r/me_irl" where every post is titled with the same six characters, "me_irl".  Other popular subreddits are seemingly the opposite, such as "r/futurology", where most post titles are scientific headlines with over 200 characters.  One explanation for what is going on here is that there are many, many times more posts with 50 character titles than, say, 261. So there's a dramatic increase in variability towards the upper end of the character limit.  As the number of characters increases, the posts could tend to be actual issues or phenomena/facts that require longer explanation, and thus recieve more views and reactions (ex. A president's quote = more characters and responses).
 <body>
 
 <hr size="20">
 
-<h2> Comments </h2><p> We then wanted to see the relation between the post's title length, and the number of comments the post recieves. People will upvote anything they think is funny or interesting, however, we wanted to see which posts actually get people commenting. Comments are what we deemed as true reactions to the posts, since it requires viewers to put in more effort than just a click for an upvote.</p>
+<h2> Comments </h2><p> We then wanted to see the relationship between the post's title length, and the number of comments the post recieved. People will upvote anything they think is funny or interesting, however, we wanted to see which posts actually get people commenting. Comments are what we deemed as true reactions to the posts, since it requires viewers to put in more effort than just a click for an upvote.</p>
 
   <div class="
       cell border-box-sizing code_cell rendered">
@@ -292,13 +292,13 @@ In this first graph, we will see if there is a relationship between the length o
   </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<body>Based on the relation we are able to see that the number of comments are actually greater based on the character length of the posts. One explanation is that the longer the character length in a post, the more likely it is a controversial issue, quote, or topic that requires a lot of explanation.  Thus, people are more likely to comment on and put their input on these types of posts. For example, posts on the subreddit "r/news" tend to have longer post titles (because of headlines) and thus generate more comments for people to furhter the discussion of the topic.  This is in contrast to memes captioned with a few words, or 3-liner jokes that will mostly recieve likes and not comments.</body>
+<body>Based on the relation, we are able to see that the number of comments are actually greater based on the character length of the posts. One explanation is that the longer the title, the more likely it is a controversial issue, quote, or topic that requires a lot of explanation.  Thus, people are more likely to comment on and put their input on these types of posts. For example, posts on the subreddit "r/news" tend to have longer post titles (because of headlines) and thus generate more comments for people to furhter the discussion of the topic.  This is in contrast to memes captioned with a few words, or 3-liner jokes that will mostly recieve likes and not comments.</body>
   
 <hr size="20">
 
 <p><center> <h2> Reddit Artwork </h2> </center>
 <img src="https://static.makeuseof.com/wp-content/uploads/2019/04/whats-reddit-670x335.jpg" /></p>
-<h2> Filtered Data </h2><p> We then decided to filter our data to only include the most popular subreddits, so they don't include ones like "r/me_irl" as discussed earlier. We want to see the relationship between length and upvotes for typical reddit day to day users, that are making posts that arent silly small trends like "r/hmmm"</p>
+<h2> Filtered Data </h2><p> We then decided to filter our data to only include the most popular subreddits, so they don't include ones like "r/me_irl", as discussed earlier. We want to see the relationship between title length and upvotes for typical reddit users, that aren't making posts with smally, silly trends like "r/hmmm"</p>
 </div>
 </div>
 </div>
@@ -311,7 +311,7 @@ In this first graph, we will see if there is a relationship between the length o
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><p> In this SQL Query, we created an entirely new cvs file with the top 15 subreddits (most subscribers) to see the relation again, with subreddits that most of reddit uses on a day to day basis. This gives us a more accurate analysis in understanding the relationship between post title length, and popularity.<p></p>
+<p><p> In this SQL Query, we created an entirely new .csv file with the top 15 subreddits (most subscribers) to see the relation again, with subreddits that most of reddit uses on a day to day basis.  This gives us a more accurate analysis in understanding the relationship between post title length, and popularity.<p></p>
 
   
 
@@ -430,7 +430,7 @@ In this first graph, we will see if there is a relationship between the length o
 <body>
 <h2> Graphing Filtered Data</h2>
 
-We used the same method from above to graph the relationship between the post title's length and the acerage score it recieves, except only looking at the top 15 subreddits.
+We used the same method from above to graph the relationship between the post title's length and the average score it recieves, except only looking at the top 15 subreddits.
 </body>
 </div>
 </div>
@@ -598,7 +598,7 @@ We used the same method from above to graph the relationship between the post ti
   </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>As you can see the ploynomial regression gives us a more accurate analysis of the data compared to the linear regression line.  The relation between the length of characters in a post and the average number of upvotes is a clear polynomial relation.  Reddit users can use this now to get an accurate way to decide if they want to either go with a short amount of characters, to average around 300 upvotes, or go with a more lengthy title to gain an average of 300+ upvotes. </p><hr size="20"> 
+<p>The polynomial regression gives us a more accurate analysis of the data compared to the linear regression line.  The relationship between the length of characters in a post and the average number of upvotes is a clear polynomial relation.  Reddit users can use this knowledge to decide if they want to either go with a short amount of characters to average around 300 upvotes, or go with a more lengthy title to gain an average of 300+ upvotes. </p><hr size="20"> 
 
 <center> <h2> Typical Reddit Home Page </h2></center>
 </div>
@@ -613,7 +613,7 @@ We used the same method from above to graph the relationship between the post ti
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<center> <h2> Time Matters </h2> </center><p>In this section, we analyzed whether the time of day something is posted is correlated with its popularity. This way, Reddit users can use this knowledge and potentially hold off posting something, in order to get the most amount of traction on their post. We started by getting a new batch of data from BigQuery.</p>
+<center> <h2> Time Matters </h2> </center><p>In this section, we analyzed whether the time of day something is posted is correlated with its popularity.  This way, Reddit users can use this knowledge and potentially hold off posting something, in order to get the most amount of traction on their post.  We started by getting a new batch of data from BigQuery.</p>
 </div>
 </div>
 </div>
@@ -626,7 +626,7 @@ We used the same method from above to graph the relationship between the post ti
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p> Our goal was to figure out which hour of the day, and which weekday, a post would be most likely to maximize its popularity.  So we organized our data into 168 rows (24 hours in a day x 7 days a week), each row having the average score the post recieves.  We decided to look at posts which have a score of 100 or more upvotes, so our results are not biased with the large majority of posts having little to no upvotes. </p>
+<p> Our goal was to figure out what time of day a post would be most likely to maximize its popularity.  So we organized our data into 168 rows (24 hours in a day x 7 days a week), each row having the average score the post recieves.  We decided to look at posts which have a score of 100 or more upvotes, so our results are not biased with the large majority of posts having little to no upvotes, bringing the average down. </p>
 </div>
 </div>
 </div>
@@ -1103,12 +1103,12 @@ We used the same method from above to graph the relationship between the post ti
   </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>As we can see from the data, the posts with the highest score are posted between 6:00am - 9:00am EST. 7am definitely has the highest amount of upvotes over the seven days of the week, but it seems to be the most popular to make posts on Saturday and Sunday. After heavy analysis over all of these datasets we are finally able to make an accurate guess on what is best for Reddit users popularity in posts. Overall, Reddit users should have the best chance to score upvotes if they post on a Saturday, at 7am, with roughly 5-25 characters in their post. The popularity can further be increased if their post is in a top 15 subreddit.
+<p>As we can see from the data, the posts with the highest score are posted between 6:00am - 9:00am EST.  7:00am definitely has the highest amount of upvotes over the seven days of the week, but it seems to be the most popular to make posts on Saturday and Sunday.  One possible explanataion is that most Reddit posts can take a few hours to reach the "Front Page", or the top of their subreddit.  Uploading in the morning will give it time to get to rise to the top, so users can see it when they first check Reddit in the morning.  After heavy analysis over all of these datasets, we are finally able to make an accurate guess on what is best for Reddit users popularity in posts.  Overall, Reddit users should have the best chance to score upvotes if they post on a Saturday, at 7am, with roughly 5-25 characters in their post.  The popularity can further be increased if their post is in a top 15 subreddit.
 
 <hr size="20">
 
 <center> <h2> Conclusion and More </h2> </center>
 
-<p>Reddit has grown to be an outstanding social media website.  However, many people still do not know the trick to nailing down how to get their posts viewed and seen by the public.  This project helped us learn so much more about the website and what kind of data is continously being drawn by third party websites. As you can see from this analysis, there are many factors that can put into a post on reddit that will ultimately decide how many views and upvotes one will get. We hope that this helps new Reddit users get a great jump on how to begin posting and what kind of times and post titles they should be using.
+<p>Reddit has grown to be an outstanding social media website.  However, many people still do not know the trick to nailing down how to get their posts viewed and seen by the public.  This project helped us learn so much more about the website and what kind of data is continously being drawn by third party websites.  As you can see from this analysis, there are many factors that can put into a post on reddit that will ultimately decide how many views and upvotes one will get.  We hope that this helps new Reddit users get a great jump on how to begin posting and what kind of times and post titles they should be using.
 
-If you are interested in Reddit and the many datasets to use, we recommend using Google's <a href ="https://cloud.google.com/bigquery/docs"> BigQuery </a> and <a href="https://pushshift.io">Pushshift</a>. This API can do over 1,000 Reddit calls a second, so using a select amount of data from Janurary 2016 to August 2019 gave us plenty of data points to work with.  This tutorial was a small fraction of the amount of data and things that can be done using Reddits data. If you've made it this far, then thank you for the read, and we hope you learned something new! </p>
+If you are interested in Reddit and the many datasets to use, we recommend using Google's <a href ="https://cloud.google.com/bigquery/docs"> BigQuery </a> and <a href="https://pushshift.io">Pushshift</a>.  This API can do over 1,000 Reddit calls a second, so using a select amount of data from Janurary 2016 to August 2019 gave us plenty of data points to work with.  This tutorial was a small fraction of the amount of data and things that can be done using Reddits data.  If you've made it this far, then thank you for the read, and we hope you learned something new! </p>
