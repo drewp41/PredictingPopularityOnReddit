@@ -73,9 +73,6 @@ We used the following SQL command through Googles BigQuery to at first take data
 <p><body> In this SQL Query we are getting the length of every single title, averaging the score based on the length of the title, the average number of comments based on the length of the title, and the number of posts with that amount of characters. This is done by using the 'GROUP BY' command with SQL. BigQuery convertd this data into a <a href= https://www.howtogeek.com/348960/what-is-a-csv-file-and-how-do-i-open-it/>csv file</a>, which is a table or excel seperating the data by commas (,) making it easy to parse and split the data with.</p>
 <h2> Reading the Data </h2><p>We will First use Pythons Pandas to read in the csv file and convert it into a panda <a href=https://www.geeksforgeeks.org/python-pandas-dataframe/>dataframe</a>, which is a two-dimensional size-mutable, potentially heterogeneous tabular data structure with labeled axes (rows and columns)</p>
 
-</div>
-</div>
-</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[167]:</div>
@@ -85,7 +82,6 @@ We used the following SQL command through Googles BigQuery to at first take data
 <span class="n">data</span><span class="p">[:</span><span class="mi">10</span><span class="p">]</span>
 </pre></div>
 
-    </div>
 </div>
 </div>
 
@@ -95,25 +91,12 @@ We used the following SQL command through Googles BigQuery to at first take data
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[167]:</div>
 
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
