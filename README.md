@@ -645,10 +645,12 @@ In this next graph we will graph to see the relation between Length of Title ver
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><p>As you can see the ploynomial regression gives us a more accurate analysis of the data. We can see, the relation between the length of characters in a post and the average number of upvotes is a clear polynomial relation. Reddit users can use this now to get an accurate way to decide if they want to either go with a short amount of characters to get around 300 upvotes, or go with a more lengthy response to get 300+ upvotes. </p></p>
+
 <hr size=20>
 
-<p><center> <h2> Typical Reddit Home Page </h2></center>
-<img src="https://i.redd.it/vb63xmw7skm21.png" width= 800/></p>
+<p><center> <h2> Typical Reddit Home Page </h2></center></p>
+  
+<img src="https://i.redd.it/vb63xmw7skm21.png" width= 800/>
 
 </div>
 </div>
@@ -1153,7 +1155,7 @@ In this next graph we will graph to see the relation between Length of Title ver
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>As we can see from the data, the most popular times to post are between 6am-9am. 7am definitely has the highest ratio of upvotes over the seven days of the week, but it seems to be the most popular to make posts on Saturday and Sunday. After heavy analysis over all of these datasets we are finally able to make an accurate guess/prediction on what is best for Reddit users popularity in posts. Overall Reddit users should have the best ratios of upvotes if they post on a Saturday, at 7am, with roughly 5-25 characters in their post. This will give them the highest chance and possibility of getting a great amount of upvotes on their post, especially if it is a part of the top fifteen subreddits.
+<p>As we can see from the data, the most popular times to post are between 6am-9am. 7am definitely has the highest ratio of upvotes over the seven days of the week, but it seems to be the most popular to make posts on Saturday and Sunday. After heavy analysis over all of these datasets we are finally able to make an accurate guess/prediction on what is best for Reddit users popularity in posts. Overall Reddit users should have the best ratios of upvotes if they post on a Saturday, at 7am, with roughly 5-25 characters in their post. This will give them the highest chance and possibility of getting a great amount of upvotes on their post, especially if it is a part of the top fifteen subreddits.</p>
 
 <hr size=20>
 
@@ -1162,4 +1164,3 @@ In this next graph we will graph to see the relation between Length of Title ver
 <p>Reddit has grown to be an outstanding social media website, however many still do not know the trick to nailing down how to get their posts viewed and seen by the public. This project helped us learn so much more about the website and what kind of data is continously being drawn by third party websites. As you can see from this analysis, there are many factors that can put into a post on reddit that will ultimately decide how many views and upvotes one will get. We hope that this helps new Reddit users get a great jump on how to begin posting and what kind of times and amount of characters they should be using based on the topic.
 
 If you are interested in Reddit and the many datasets to use, we recommend using Google's <a href =https://cloud.google.com/bigquery/docs/> BigQuery </a> and <a href=https://pushshift.io/>Pushshift</a>. This API consistently takes in data second by second, so we used only a select amount of data from 2016 to August of this year (2019). This tutorial was a minor fraction of the amount of data and things that can be done using Reddits data. We hope that others are inspired to do the same kind of tutorials, and we hope it was worth the read! </p>
-</body>
