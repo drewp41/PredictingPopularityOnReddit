@@ -41,6 +41,7 @@ In this tutorial, our goal is to analyze all the Reddit posts from Janurary 2016
 
 We used the following SQL command through Google's BigQuery to take data from <a href= "https://pushshift.io" > "Pushshift" </a> (a third party Reddit API) that tracks nearly all of Reddit's post history.  We are taking in data from Janurary 2016 to August 2019, which contains about 510 million rows of data.  Luckily using Google's BigQuery, that process only takes a matter of seconds.
 <br>
+<br>
 
 </body>
 </div>
@@ -179,7 +180,7 @@ We used the following SQL command through Google's BigQuery to take data from <a
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>In the DataFrame above you can see:</p>
 <ul>
-<li>length_title: number of characters in the title.</li>
+<li>length_title: number of characters in the title (1-300).</li>
 <li>avg_score: average score (upvotes minus downvotes) of the posts with the certain title length.</li>
 <li>avg_comments: average amount of comments on a post with the certain title length.</li>
 <li>num_posts: number of posts with that certain title length.</li>
@@ -189,6 +190,7 @@ We used the following SQL command through Google's BigQuery to take data from <a
 <h2> Graphing</h2>
 
 In this first graph, we will see if there is a relationship between the length of the post title, and the score that post recieves.  This can help readers gain an insight to how long they should make their posts to gain the most traction.
+<br>
 <br>
 </body>
 </div>
@@ -240,12 +242,12 @@ In this first graph, we will see if there is a relationship between the length o
   </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><body> We can see that there is a clear relationship between the number of characters in the post title, and the score recieved. Based on the graph, it seems the highest scored posts have captions of character lengths between 5-25 and 153-300+. The range most likely is based off the fact that the type of posts are fairly different. There are many popular subreddits named short and quick things like "meow" to follow a trend that will be a picture of a cat that revieve many likes as long as they are following the trend. This Explains the peak and the downtrend of the number of likes as the posts begin to be normal and causal day to day type of posts. The number of UpVotes however does begin to rise again as the number of character are longer. This is because as the characters get longer, they tend to be actual issues and problems that recieve more views and reactions (ex: A president trump quote = more characters and responses).
+<p><body> We can see that there is a clear relationship between the number of characters in the post title, and the score recieved. Based on the graph, it seems the highest scored posts have captions of character lengths between 5-25 and 153-300. The range most likely is based off the fact that the type of posts are fairly different. There are many popular subreddits such as "r/me_irl" where every post is titled with the same six characters, "me_irl". Other popular subreddits are seemingly the opposite, such as "r/futurology", where most post titles are scientific headlines with over 200 characters.  One explanation for what is goin on here is that there are many, many times more posts with 50 character titles than, say, 261. So there's a dramatic increase in variability towards the upper end of the character limit.  As the number of characters get longer, the posts could tend to be actual issues or phenomena/facts that require longer explanation, and thus recieve more views and reactions (Ex. A president's quote = more characters and responses).
 <body>
 
 <hr size="20">
 
-<h2> Comments </h2><p> We then decided to check if there was a relation between amount of comments verse the character length of the posts. People will place upvotes to anything they think is funny, however we wanted to see which posts actually get people commenting. Comments are what we deemed as true reactions to the posts, since it requires viewers to put in more effort than just a click for an upvote.</p>
+<h2> Comments </h2><p> We then wanted to see the relation between the post's title length, and the number of comments the post recieves. People will upvote anything they think is funny or interesting, however, we wanted to see which posts actually get people commenting. Comments are what we deemed as true reactions to the posts, since it requires viewers to put in more effort than just a click for an upvote.</p>
 
   <div class="
       cell border-box-sizing code_cell rendered">
@@ -290,7 +292,7 @@ In this first graph, we will see if there is a relationship between the length o
   </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<body>Based on the relation we are able to see that the Number of comments are actually greater based on the character length of the posts. A reasoning for this data is that the longer the character length in posts most likely mean, it is on a controversial topic, quote, or a scientific analysis that people are more likely to comment on and put their input. This is in contrast to small memes and jokes that will mostly recieve likes and not comments.</body>
+<body>Based on the relation we are able to see that the Number of comments are actually greater based on the character length of the posts. One explanation is that the longer the character length in a post, the more likely it is a controversial topic, quote, or a topic that requires a lot of explanation.  Thus, people are more likely to comment on and put their input on these types of posts. For example, posts on the subreddit "r/news" tend to have longer post titles (because of headlines) and thus generate more comments for people to furhter the discussion of the topic.  This is in contrast to memes captioned with a few words, or 3-liner jokes that will mostly recieve likes and not comments.</body>
   
 <hr size="20">
 
