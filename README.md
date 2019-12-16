@@ -17,10 +17,6 @@ In this tutorial, our goal is to tidy up the data of posts within a years total,
 <h1 id="getting-started-with-the-data">Getting started with the Data</h1>
 <p>We decided to use Python 3 and SQL to help gain and analyze our data. Crucial libraries used to help us where: <a href="https://towardsdatascience.com/a-quick-introduction-to-the-pandas-python-library-f1b678f34673">pandas</a>, <a href="https://matplotlib.org/">matplotlib</a>, <a href="https://python-graph-gallery.com/seaborn/">seaborn</a>, and <a href="https://machinelearningmastery.com/a-gentle-introduction-to-scikit-learn-a-python-machine-learning-library/">scikit-learn</a>.</p>
 </body>
-</div>
-</div>
-</div>
-
   
 
   <div class="
@@ -41,11 +37,7 @@ In this tutorial, our goal is to tidy up the data of posts within a years total,
 <span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="k">import</span> <span class="n">LinearRegression</span>
 </pre></div>
 
-    </div>
-</div>
-</div>
-
-  </div>
+ 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <body> We plan on using multiple panda dataframes that will be read in using SQL commands through googles BigQuery website.
@@ -69,11 +61,6 @@ We used the following SQL command through Googles BigQuery to at first take data
 <p><body> In this SQL Query we are getting the length of every single title, averaging the score based on the length of the title, the average number of comments based on the length of the title, and the number of posts with that amount of characters. This is done by using the 'GROUP BY' command with SQL. BigQuery convertd this data into a <a href= https://www.howtogeek.com/348960/what-is-a-csv-file-and-how-do-i-open-it/>csv file</a>, which is a table or excel seperating the data by commas (,) making it easy to parse and split the data with.</p>
 <h2> Reading the Data </h2><p>We will First use Pythons Pandas to read in the csv file and convert it into a panda <a href=https://www.geeksforgeeks.org/python-pandas-dataframe/>dataframe</a>, which is a two-dimensional size-mutable, potentially heterogeneous tabular data structure with labeled axes (rows and columns)</p>
 
-</div>
-</div>
-</div>
-
-  
 
   <div class="
       cell border-box-sizing code_cell rendered">
@@ -83,11 +70,7 @@ We used the following SQL command through Googles BigQuery to at first take data
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;LengthScoreComments.csv&#39;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
 <span class="n">data</span><span class="p">[:</span><span class="mi">10</span><span class="p">]</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
+</pre>
 
 <div class="output_wrapper">
 <div class="output">
@@ -1186,7 +1169,7 @@ In this next graph we will graph to see the relation between Length of Title ver
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>As we can see from the data, the most popular times to post are between 6am-9am. 7am definitely has the highest ratio of upvotes over the seven days of the week, but it seems to be the most popular to make posts on Saturday and Sunday. After heavy analysis over all of these datasets we are finally able to make an accurate guess/prediction on what is best for Reddit users popularity in posts. Overall Reddit users should have the best ratios of upvotes if they post on a Saturday, at 7am, with roughly 5-25 characters in their post. This will give them the highest chance and possibility of getting a great amount of upvotes on their post, especially if it is a part of the top fifteen subreddits.
 
-<hr size=20>
+<hr size="20">
 
 <center> <h2> Conclusion and More </h2> </center>
 
