@@ -11,12 +11,12 @@ Authors: Andrew Paul, Chigozie Nna</h4></p>
 Reddit is an American social news aggregation, web content rating, and discussion website.  The site quickly gained popularity after its creation in 2005 by two University of Virgina Students, Steven Huffman, and Alexis Ohanian.  The goal of Reddit is for its users to submit content to the site in the form of links, text posts, and images, which can then be voted up or down by other users.  The posts are categorized into groups called “subreddits”, where users can share specific topics and/or interests that relate to the topic at hand.  In its early years, Reddit began to rise in popularity, with NSFW, Programming, and Science being the top trending subreddits of the time.  By 2008, a launch of numerous different subreddits began to popularize the site, with Reddit being able to gain enough popularity to overtake its competitor Digg by 2010.  Reddit’s rise to fame did not stop there, with Reddit finally achieving a total of one billion page views per month only a year later.  As of 2019, Reddit is ranked the 18th top site globally, according to Alexa Internet.
 <br>
 <br>
-In this tutorial, we analyzed all the Reddit posts from Janurary 2016 to the August 2019 (over 510 million posts!).  The goal was to provide us with knowledge into what factors of a post (such as title length, and time posted) cause the most effect in terms of up votes, down votes, score, and general reaction to a post.  Posts may vary in topics, arguments, time posted, and many more variables, but we felt as if the popularity really depended on the post's title length, and the time it was posted.  We were able to determine which length is just too short to gain attention, and what length is long enough to bore an audience.  We also looked at the most popular subreddit posts and time of day to see any upvote relation. We hope to give enough information and analysis to provide clarity, understanding, and a new found interest to readers that are unfamiliar with the social foreground. And hopefully fellow Reddit users will gain some insight on how to optimize their posts to gain the most traction.
+In this tutorial, we analyzed all the Reddit posts from Janurary 2016 to the August 2019 (over 510 million posts!).  The goal was to provide us with knowledge into what factors of a post (such as title length, and time posted) cause the most effect in terms of up votes, down votes, score, and general reaction to a post.  Posts may vary in topics, arguments, time posted, and many more variables, but we felt as if the popularity really depended on the post's title length, and the time it was posted.  We were able to determine which length is just too short to gain attention, and what length is long enough to bore an audience.  We also looked at the most popular subreddit posts and time of day to see any upvote relation. We hope to give enough information and analysis to provide clarity, understanding, and a new found interest to readers that are unfamiliar with the social foreground.  And hopefully fellow Reddit users will gain some insight on how to optimize their posts to gain the most traction.
 <body>
 <hr>
 <body>
 <h1 id="getting-started-with-the-data">Getting started with the Data</h1>
-<p>We decided to use Python 3 and SQL to gather and analyze our data. Crucial libraries used to help us were: <a href="https://towardsdatascience.com/a-quick-introduction-to-the-pandas-python-library-f1b678f34673">pandas</a>, <a href="https://matplotlib.org/">matplotlib</a>, <a href="https://python-graph-gallery.com/seaborn/">seaborn</a>, and <a href="https://machinelearningmastery.com/a-gentle-introduction-to-scikit-learn-a-python-machine-learning-library/">scikit-learn</a>.</p>
+<p>We decided to use Python 3 and SQL to gather and analyze our data.  Crucial libraries used to help us were: <a href="https://towardsdatascience.com/a-quick-introduction-to-the-pandas-python-library-f1b678f34673">pandas</a>, <a href="https://matplotlib.org/">matplotlib</a>, <a href="https://python-graph-gallery.com/seaborn/">seaborn</a>, and <a href="https://machinelearningmastery.com/a-gentle-introduction-to-scikit-learn-a-python-machine-learning-library/">scikit-learn</a>.</p>
 </body>
   
 
@@ -57,7 +57,7 @@ We used the following SQL command through Google's BigQuery to take data from <a
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 
-<p>In this SQL Query we are getting the length of every single title, the average score based on the length of the title, the average number of comments based on the length of the title, and the number of posts with that amount of characters. This is done by using the 'GROUP BY' command with SQL. BigQuery convertd this data into a .csv file, making it easy to parse and analyze. </p>
+<p>In this SQL Query we are getting the length of every single title, the average score based on the length of the title, the average number of comments based on the length of the title, and the number of posts with that amount of characters.  This is done by using the 'GROUP BY' command with SQL.  BigQuery convertd this data into a .csv file, making it easy to parse and analyze. </p>
   
 <h2> Reading the Data </h2><p>We first used Python's Pandas module to read in the .csv file and convert it into a Panda <a href="https://www.geeksforgeeks.org/python-pandas-dataframe">dataframe</a>, which is a two-dimensional, size-mutable, and potentially heterogeneous tabular data structure with labeled axes (rows and columns).
 
@@ -247,7 +247,7 @@ In this first graph, we looked at the potential relationship between the length 
 
 <hr size="20">
 
-<h2> Comments </h2><p> We then wanted to see the relationship between the post's title length, and the number of comments the post recieved. People will upvote anything they think is funny or interesting, however, we wanted to see which posts actually get people commenting. Comments are what we deemed as true reactions to the posts, since it requires viewers to put in more effort than just a click for an upvote.</p>
+<h2> Comments </h2><p>We then wanted to see the relationship between the post's title length, and the number of comments the post recieved.  People will upvote anything they think is funny or interesting, however, we wanted to see which posts actually get people commenting.  Comments are what we deemed as true reactions to the posts, since it requires viewers to put in more effort than just a click for an upvote.</p>
 
   <div class="
       cell border-box-sizing code_cell rendered">
@@ -292,7 +292,7 @@ In this first graph, we looked at the potential relationship between the length 
   </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<body>Based on the relation, we are able to see that the number of comments are actually greater based on the character length of the posts. One explanation is that the longer the title, the more likely it is a controversial issue, quote, or topic that requires a lot of explanation.  Thus, people are more likely to comment on and put their input on these types of posts. For example, posts on the subreddit "r/news" tend to have longer post titles (because of headlines) and thus generate more comments for people to furhter the discussion of the topic.  This is in contrast to memes captioned with a few words, or 3-liner jokes that will mostly recieve likes and not comments.</body>
+<body>Based on the relation, we are able to see that the number of comments are actually greater based on the character length of the posts. One explanation is that the longer the title, the more likely it is a controversial issue, quote, or topic that requires a lot of explanation.  Thus, people are more likely to comment on and put their input on these types of posts.  For example, posts on the subreddit "r/news" tend to have longer post titles (because of headlines) and thus generate more comments for people to furhter the discussion of the topic.  This is in contrast to memes captioned with a few words, or 3-liner jokes that will mostly recieve likes and not comments.</body>
   
 <hr size="20">
 
@@ -311,7 +311,7 @@ In this first graph, we looked at the potential relationship between the length 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><p> In this SQL Query, we created an entirely new .csv file with the top 15 subreddits (most subscribers) to see the relation again, with subreddits that most of reddit uses on a day to day basis.  This gives us a more accurate analysis in understanding the relationship between post title length, and popularity.<p></p>
+<p><p> In this SQL Query, we created an entirely new .csv file with the top 15 subreddits (most subscribers) to see the relation again, with subreddits that most of reddit uses on a day to day basis.  This gave us a more accurate analysis in understanding the relationship between post title length, and popularity.<p></p>
 
   
 
@@ -430,7 +430,7 @@ In this first graph, we looked at the potential relationship between the length 
 <body>
 <h2> Graphing Filtered Data</h2>
 
-We used the same method from above to graph the relationship between the post title's length and the average score it recieves, except only looking at the top 15 subreddits.
+We used the same method from above to graph the relationship between the post title's length and the average score it recieved, except only looking at the top 15 subreddits.
 </body>
 </div>
 </div>
@@ -481,7 +481,7 @@ We used the same method from above to graph the relationship between the post ti
   </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Based on the new graph we can see a less skewed range of values and a more accurate drop off of average score after around 25 characters. It seems that the amount of characters required are still the same, despite the data being filtered now. This proves the fact that it is best to have posts that are between the amounts of 5-25 characters. </p><hr size="20">
+<p>Based on the new graph we can see a less skewed range of values and a more accurate drop off of average score after around 25 characters.  It seems that the amount of characters required are still the same, despite the data being filtered now.  This proves the fact that it is best to have posts that are between the amounts of 5-25 characters. </p><hr size="20">
 
 <center> <h2> Linear & Polynomial Regression </h2> </center><p> We decided to get a relative prediction of what the outcome would be by creating both a linear regression of the data, as well as a polynomial trend line. </p><h3> Linear </h3>
 </div>
