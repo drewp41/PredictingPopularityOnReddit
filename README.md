@@ -38,7 +38,7 @@ In this tutorial, our goal is to tidy up the data of posts within a years total,
 
 <h2>Processing and Recieving data </h2>
 
-We used the following SQL command through Googles BigQuery to at first take data from a third party called <a href=https://pushshift.io/>"Pushshift"</a> that is a Reddit API that tracks almost all of Reddit's for the last few years. We are taking in data from 2016 to Augst 2019 due to the immense amount of data that is tracked.
+We used the following SQL command through Googles BigQuery to at first take data from a third party called <a href="https://pushshift.io" />"Pushshift"</a> that is a Reddit API that tracks almost all of Reddit's for the last few years. We are taking in data from 2016 to Augst 2019 due to the immense amount of data that is tracked.
 </body>
 </div>
 </div>
@@ -52,8 +52,8 @@ We used the following SQL command through Googles BigQuery to at first take data
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><body> In this SQL Query we are getting the length of every single title, averaging the score based on the length of the title, the average number of comments based on the length of the title, and the number of posts with that amount of characters. This is done by using the 'GROUP BY' command with SQL. BigQuery convertd this data into a <a href= https://www.howtogeek.com/348960/what-is-a-csv-file-and-how-do-i-open-it/>csv file</a>, which is a table or excel seperating the data by commas (,) making it easy to parse and split the data with.</p>
-<h2> Reading the Data </h2><p>We will First use Pythons Pandas to read in the csv file and convert it into a panda <a href=https://www.geeksforgeeks.org/python-pandas-dataframe/>dataframe</a>, which is a two-dimensional size-mutable, potentially heterogeneous tabular data structure with labeled axes (rows and columns)</p>
+<p><body> In this SQL Query we are getting the length of every single title, averaging the score based on the length of the title, the average number of comments based on the length of the title, and the number of posts with that amount of characters. This is done by using the 'GROUP BY' command with SQL. BigQuery convertd this data into a <a href= "https://www.howtogeek.com/348960/what-is-a-csv-file-and-how-do-i-open-it" />csv file</a>, which is a table or excel seperating the data by commas (,) making it easy to parse and split the data with.</p>
+<h2> Reading the Data </h2><p>We will First use Pythons Pandas to read in the csv file and convert it into a panda <a href="https://www.geeksforgeeks.org/python-pandas-dataframe" />dataframe</a>, which is a two-dimensional size-mutable, potentially heterogeneous tabular data structure with labeled axes (rows and columns)</p>
 
 
   <div class="
@@ -253,11 +253,6 @@ In this first graph we will graph to see the relation between Length of Title ve
 <hr size="20">
 
 <h2> Comments </h2><p> We then decided to check if there was a relation between amount of comments verse the character length of the posts. People will place upvotes to anything they think is funny, however we wanted to see which posts actually get people commenting. Comments are what we deemed as true reactions to the posts, since it requires viewers to put in more effort than just a click for an upvote.</p>
-</div>
-</div>
-</div>
-
-  
 
   <div class="
       cell border-box-sizing code_cell rendered">
@@ -322,10 +317,6 @@ In this first graph we will graph to see the relation between Length of Title ve
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><p> In this SQL Query we are creating an entirely new cvs file with the top 15 subreddits to see the relation between these subreddits that people typically talk about on a day to day basis. This data should give an accurate analysis of what we were looking for and give a different result in the relation shown in the graph<p></p>
 
-</div>
-</div>
-</div>
-
   
 
   <div class="
@@ -337,10 +328,6 @@ In this first graph we will graph to see the relation between Length of Title ve
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">Unbias</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;FilteredSubLengthScore.csv&#39;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
 <span class="n">Unbias</span><span class="p">[:</span><span class="mi">10</span><span class="p">]</span>
 </pre></div>
-
-    </div>
-</div>
-</div>
 
 <div class="output_wrapper">
 <div class="output">
@@ -1169,4 +1156,4 @@ In this next graph we will graph to see the relation between Length of Title ver
 
 <p>Reddit has grown to be an outstanding social media website, however many still do not know the trick to nailing down how to get their posts viewed and seen by the public. This project helped us learn so much more about the website and what kind of data is continously being drawn by third party websites. As you can see from this analysis, there are many factors that can put into a post on reddit that will ultimately decide how many views and upvotes one will get. We hope that this helps new Reddit users get a great jump on how to begin posting and what kind of times and amount of characters they should be using based on the topic.
 
-If you are interested in Reddit and the many datasets to use, we recommend using Google's <a href =https://cloud.google.com/bigquery/docs/> BigQuery </a> and <a href=https://pushshift.io/>Pushshift</a>. This API consistently takes in data second by second, so we used only a select amount of data from 2016 to August of this year (2019). This tutorial was a minor fraction of the amount of data and things that can be done using Reddits data. We hope that others are inspired to do the same kind of tutorials, and we hope it was worth the read! </p>
+If you are interested in Reddit and the many datasets to use, we recommend using Google's <a href ="https://cloud.google.com/bigquery/docs"/> BigQuery </a> and <a href="https://pushshift.io"/>Pushshift</a>. This API consistently takes in data second by second, so we used only a select amount of data from 2016 to August of this year (2019). This tutorial was a minor fraction of the amount of data and things that can be done using Reddits data. We hope that others are inspired to do the same kind of tutorials, and we hope it was worth the read! </p>
