@@ -292,13 +292,13 @@ In this first graph, we will see if there is a relationship between the length o
   </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<body>Based on the relation we are able to see that the Number of comments are actually greater based on the character length of the posts. One explanation is that the longer the character length in a post, the more likely it is a controversial topic, quote, or a topic that requires a lot of explanation.  Thus, people are more likely to comment on and put their input on these types of posts. For example, posts on the subreddit "r/news" tend to have longer post titles (because of headlines) and thus generate more comments for people to furhter the discussion of the topic.  This is in contrast to memes captioned with a few words, or 3-liner jokes that will mostly recieve likes and not comments.</body>
+<body>Based on the relation we are able to see that the number of comments are actually greater based on the character length of the posts. One explanation is that the longer the character length in a post, the more likely it is a controversial issue, quote, or topic that requires a lot of explanation.  Thus, people are more likely to comment on and put their input on these types of posts. For example, posts on the subreddit "r/news" tend to have longer post titles (because of headlines) and thus generate more comments for people to furhter the discussion of the topic.  This is in contrast to memes captioned with a few words, or 3-liner jokes that will mostly recieve likes and not comments.</body>
   
 <hr size="20">
 
 <p><center> <h2> Reddit Artwork </h2> </center>
 <img src="https://static.makeuseof.com/wp-content/uploads/2019/04/whats-reddit-670x335.jpg" /></p>
-<h2> Filtered Data </h2><p> We then decided to filter our data because there was very big bias with the top subreddits with small captions. We want to see the relationship between length and upvotes for typical reddit day to day users, that are making posts that arent silly small trends like "meow"</p>
+<h2> Filtered Data </h2><p> We then decided to filter our data to only include the most popular subreddits, so they don't include ones like "r/me_irl" as discussed earlier. We want to see the relationship between length and upvotes for typical reddit day to day users, that are making posts that arent silly small trends like "r/hmmm"</p>
 </div>
 </div>
 </div>
@@ -311,7 +311,7 @@ In this first graph, we will see if there is a relationship between the length o
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><p> In this SQL Query we are creating an entirely new cvs file with the top 15 subreddits to see the relation between these subreddits that people typically talk about on a day to day basis. This data should give an accurate analysis of what we were looking for and give a different result in the relation shown in the graph<p></p>
+<p><p> In this SQL Query, we created an entirely new cvs file with the top 15 subreddits (most subscribers) to see the relation again, with subreddits that most of reddit uses on a day to day basis. This gives us a more accurate analysis in understanding the relationship between post title length, and popularity.<p></p>
 
   
 
@@ -422,15 +422,15 @@ In this first graph, we will see if there is a relationship between the length o
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>In the DataFrame above you can see:</p>
 <ul>
-<li>length_title: Amount of Characters in the title</li>
-<li>avg_score: The average Score the post will recieve with character length</li>
-<li>num_posts: The Number of posts between 2016-Aug 2019 with character Length</li>
+<li>length_title: number of characters in the title.</li>
+<li>avg_score: average score (upvotes minus downvotes) of the posts with the certain title length.</li>
+<li>num_posts: number of posts with that certain title length.</li>
 </ul>
 <p><hr size="20"></p>
 <body>
 <h2> Graphing Filtered Data</h2>
 
-In this next graph we will graph to see the relation between Length of Title verse the Average Score to see if there is the same relation as the first graph, however if there is now a change in the data now that it is based off the top 15 most popular subreddits. This should give a more accurate amount of data that should actually help reddit users decide how loong their pots should be so they can be popular.
+We used the same method from above to graph the relationship between the post title's length and the acerage score it recieves, except only looking at the top 15 subreddits.
 </body>
 </div>
 </div>
@@ -481,9 +481,9 @@ In this next graph we will graph to see the relation between Length of Title ver
   </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Based on the new graph we can see a less skewed range of values and a smaller drop off between the relationship. We can see a more accurate drop off. It seems that the amount of characters required are still the same despite the data being filtered now. This overall proves the fact that it is best to have posts that are between the amounts of 5-25 characters. </p><hr size="20">
+<p>Based on the new graph we can see a less skewed range of values and a more accurate drop off of average score after around 25 characters. It seems that the amount of characters required are still the same, despite the data being filtered now. This proves the fact that it is best to have posts that are between the amounts of 5-25 characters. </p><hr size="20">
 
-<center> <h2> Linear & Polynomial Regression </h2> </center><p> We decied that we would like to get a relative prediction of what the outcome would be by create first a linear regression of the data and then create a ploynomial trend line to the data since it is not a linear change based on the look. </p><h3> Linear </h3>
+<center> <h2> Linear & Polynomial Regression </h2> </center><p> We decided to get a relative prediction of what the outcome would be by creating both a linear regression of the data, as well as a polynomial trend line. </p><h3> Linear </h3>
 </div>
 </div>
 </div>
@@ -598,7 +598,7 @@ In this next graph we will graph to see the relation between Length of Title ver
   </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>As you can see the ploynomial regression gives us a more accurate analysis of the data. We can see, the relation between the length of characters in a post and the average number of upvotes is a clear polynomial relation. Reddit users can use this now to get an accurate way to decide if they want to either go with a short amount of characters to get around 300 upvotes, or go with a more lengthy response to get 300+ upvotes. </p><hr size="20"> 
+<p>As you can see the ploynomial regression gives us a more accurate analysis of the data compared to the linear regression line.  The relation between the length of characters in a post and the average number of upvotes is a clear polynomial relation.  Reddit users can use this now to get an accurate way to decide if they want to either go with a short amount of characters, to average around 300 upvotes, or go with a more lengthy title to gain an average of 300+ upvotes. </p><hr size="20"> 
 
 <center> <h2> Typical Reddit Home Page </h2></center>
 </div>
@@ -613,7 +613,7 @@ In this next graph we will graph to see the relation between Length of Title ver
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<center> <h2> Time Matters </h2> </center><p>In this section we will be analyzing whether the time and day of the post also come in as a factor to upvotes. This way us Reddit users can pinpoint the very day and time we should post to get the maximum popularity and be seen as a legend to our peers. We first started by getting new data again through BigQuery</p>
+<center> <h2> Time Matters </h2> </center><p>In this section, we analyzed whether the time of day something is posted is correlated with its popularity. This way, Reddit users can use this knowledge and potentially hold off posting something, in order to get the most amount of traction on their post. We started by getting a new batch of data from BigQuery.</p>
 </div>
 </div>
 </div>
