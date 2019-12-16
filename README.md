@@ -52,7 +52,7 @@ We used the following SQL command through Googles BigQuery to at first take data
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><body> In this SQL Query we are getting the length of every single title, averaging the score based on the length of the title, the average number of comments based on the length of the title, and the number of posts with that amount of characters. This is done by using the 'GROUP BY' command with SQL. BigQuery convertd this data into a <a href= "https://www.howtogeek.com/348960/what-is-a-csv-file-and-how-do-i-open-it">csv file</a>, which is a table or excel seperating the data by commas (,) making it easy to parse and split the data with.</p>
+<p><body> In this SQL Query we are getting the length of every single title, averaging the score based on the length of the title, the average number of comments based on the length of the title, and the number of posts with that amount of characters. This is done by using the 'GROUP BY' command with SQL. BigQuery convertd this data into a <a href= "https://www.howtogeek.com/348960/what-is-a-csv-file-and-how-do-i-open-it">csv file</a>, which is a table or excel seperating the data by commas (,) making it easy to parse and split the data with.
 <h2> Reading the Data </h2><p>We will First use Pythons Pandas to read in the csv file and convert it into a panda <a href="https://www.geeksforgeeks.org/python-pandas-dataframe">dataframe</a>, which is a two-dimensional size-mutable, potentially heterogeneous tabular data structure with labeled axes (rows and columns)
 
 
