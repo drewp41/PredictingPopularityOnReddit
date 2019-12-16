@@ -38,7 +38,7 @@ In this tutorial, our goal is to tidy up the data of posts within a years total,
 
 <h2>Processing and Recieving data </h2>
 
-We used the following SQL command through Googles BigQuery to at first take data from a third party called <a href="https://pushshift.io" />"Pushshift"</a> that is a Reddit API that tracks almost all of Reddit's for the last few years. We are taking in data from 2016 to Augst 2019 due to the immense amount of data that is tracked.
+We used the following SQL command through Googles BigQuery to at first take data from a third party called <a href="https://pushshift.io">"Pushshift"</a> that is a Reddit API that tracks almost all of Reddit's for the last few years. We are taking in data from 2016 to Augst 2019 due to the immense amount of data that is tracked.
 </body>
 </div>
 </div>
