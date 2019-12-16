@@ -10,7 +10,8 @@ Authors: Andrew Paul, Chigozie Nna</h4></p>
 
 Reddit is an American social news aggregation, web content rating, and discussion website.  Originally created in 2005 by two University of Virgina Students, Steven Huffman and Alexis Ohanian, Reddit gained popularity very quickly.  The goal of Reddit is for members to submit content to the site in the form of links, text posts, and images, which can then be voted up or down by other members.  The posts are categorized into items called “subreddits” where users can share specific topics and/or interests that relate to the category at hand.  In its early years, Reddit began to rise in popularity, with NSFW, Programming, and Science being the top trending subreddits of the time. By 2008, a launch of numerous different subreddits began to popularize the site, with Reddit being able to gain enough popularity to overtake its competitor Digg by 2010.  Reddit’s rise to fame did not stop there, with Reddit finally achieving a total of one billion page views per month only a year later.  As of 2019, Reddit is ranked the 18th top site globally, according to Alexa Internet.
 <br>
-In this tutorial, our goal is to analyze all the Reddit posts from Janurary 2016 to the August 2019.  The goal is to provide us with knowledge into what factors of a post (such as title length, and time posted) cause the most effect in terms of up votes, down votes, score, and general reaction to a post.  Posts may vary in topics, arguments, time posted, and many more variables, but we feel as if the popularity really depends on the post's title length, time posted.  We will be able to determine which length is just too short to gain attention, and what length is long enough to bore an audience.  We will also look at the most popular subreddit posts and time of day to see any upvote relation. We hope to give enough information and analysis to provide, clarity, understanding and hopefully a new found interest to readers that are unfamiliar with the social foreground. And hopefully fellow Reddit users will gain some insight on how to optimize their post to gain the most traction.
+<br>
+In this tutorial, our goal is to analyze all the Reddit posts from Janurary 2016 to the August 2019.  The goal is to provide us with knowledge into what factors of a post (such as title length, and time posted) cause the most effect in terms of up votes, down votes, score, and general reaction to a post.  Posts may vary in topics, arguments, time posted, and many more variables, but we feel as if the popularity really depends on the post's title length, time posted.  We will be able to determine which length is just too short to gain attention, and what length is long enough to bore an audience.  We will also look at the most popular subreddit posts and time of day to see any upvote relation. We hope to give enough information and analysis to provide clarity, understanding, and a new found interest to readers that are unfamiliar with the social foreground. And hopefully fellow Reddit users will gain some insight on how to optimize their post to gain the most traction.
 <body>
 <hr>
 <body>
@@ -39,6 +40,7 @@ In this tutorial, our goal is to analyze all the Reddit posts from Janurary 2016
 <h2>Processing and Recieving data </h2>
 
 We used the following SQL command through Google's BigQuery to take data from <a href= "https://pushshift.io" > "Pushshift" </a> (a third party Reddit API) that tracks nearly all of Reddit's post history.  We are taking in data from Janurary 2016 to August 2019, which contains about 510 million rows of data.  Luckily using Google's BigQuery, that process only takes a matter of seconds.
+<br>
 
 </body>
 </div>
@@ -56,7 +58,7 @@ We used the following SQL command through Google's BigQuery to take data from <a
 
 <p>In this SQL Query we are getting the length of every single title, averaging the score based on the length of the title, the average number of comments based on the length of the title, and the number of posts with that amount of characters. This is done by using the 'GROUP BY' command with SQL. BigQuery convertd this data into a .csv file, making it easy to parse and analyze. </p>
   
-<h2> Reading the Data </h2><p>We will First use Pythons Pandas to read in the csv file and convert it into a panda <a href="https://www.geeksforgeeks.org/python-pandas-dataframe">dataframe</a>, which is a two-dimensional size-mutable, potentially heterogeneous tabular data structure with labeled axes (rows and columns)
+<h2> Reading the Data </h2><p>We will First use Python's Pandas module to read in the .csv file and convert it into a Panda <a href="https://www.geeksforgeeks.org/python-pandas-dataframe">dataframe</a>, which is a two-dimensional size-mutable, potentially heterogeneous tabular data structure with labeled axes (rows and columns).
 
 
   <div class="
@@ -177,16 +179,16 @@ We used the following SQL command through Google's BigQuery to take data from <a
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>In the DataFrame above you can see:</p>
 <ul>
-<li>length_title: Amount of Characters in the title</li>
-<li>avg_score: The average Score the post will recieve with character length</li>
-<li>avg_comments: The average amount of comments a post will recieve with character length</li>
-<li>num_posts: The Number of posts between 2016-Aug 2019 with character Length</li>
+<li>length_title: number of characters in the title.</li>
+<li>avg_score: average score (upvotes minus downvotes) of the posts with the certain title length.</li>
+<li>avg_comments: average amount of comments on a post with the certain title length.</li>
+<li>num_posts: number of posts with that certain title length.</li>
 </ul>
 <p><hr size="20"></p>
 <body>
 <h2> Graphing</h2>
 
-In this first graph we will graph to see the relation between Length of Title verse the Average Score to see if there is a relation between if a reddit user will reciever more votes based on the character length of their post. This can help readers get an insight to how long they should make their posts if they desire to be the most popular reddit user of their peers.
+In this first graph, we will see if there is a relationship between the length of the post title, and the score that post recieves.  This can help readers gain an insight to how long they should make their posts to gain the most traction.
 </body>
 </div>
 </div>
@@ -237,7 +239,7 @@ In this first graph we will graph to see the relation between Length of Title ve
   </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><body> We can see that there is a clear relation between the upvotes and the  number of characters in the post title. Based on the graph it seems that it is the best to have captions of Character lengths between 5-25 and 153-300+. The range most likely is based off the fact that the type of posts are farely different. There are many popular subreddits named short and quick things like "meow" to follow a trend that will be a picture of a cat that revieve many likes as long as they are following the trend. This Explains the peak and the downtrend of the number of likes as the posts begin to be normal and causal day to day type of posts. The number of UpVotes however does begin to rise again as the number of character are longer. This is because as the characters get longer, they tend to be actual issues and problems that recieve more views and reactions (ex: A president trump quote = more characters and responses).
+<p><body> We can see that there is a clear relationship between the number of characters in the post title, and the score recieved. Based on the graph, it seems the highest scored posts have captions of character lengths between 5-25 and 153-300+. The range most likely is based off the fact that the type of posts are fairly different. There are many popular subreddits named short and quick things like "meow" to follow a trend that will be a picture of a cat that revieve many likes as long as they are following the trend. This Explains the peak and the downtrend of the number of likes as the posts begin to be normal and causal day to day type of posts. The number of UpVotes however does begin to rise again as the number of character are longer. This is because as the characters get longer, they tend to be actual issues and problems that recieve more views and reactions (ex: A president trump quote = more characters and responses).
 <body>
 
 <hr size="20">
