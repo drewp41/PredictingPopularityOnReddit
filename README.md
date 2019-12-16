@@ -257,7 +257,6 @@ In this first graph we will graph to see the relation between Length of Title ve
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 
-    </div>
 </div>
 </div>
 
@@ -1056,7 +1055,6 @@ In this next graph we will graph to see the relation between Length of Title ver
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 
-    </div>
 </div>
 </div>
 
@@ -1071,7 +1069,6 @@ In this next graph we will graph to see the relation between Length of Title ver
 
 
 <div class="output_text output_subarea ">
-<pre>&lt;Figure size 432x288 with 0 Axes&gt;</pre>
 </div>
 
 </div>
